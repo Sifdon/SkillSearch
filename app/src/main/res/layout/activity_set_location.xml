@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skillsearch.skillsearch.SetLocation">
+
+    <!--
+    <include layout="@layout/activity_maps" />
+    -->
+    <include layout="@layout/osmdroid_maps" />
+
+    <LinearLayout
+        android:id="@+id/user_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/box_helper"
+        android:padding="@dimen/half_margin"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/user_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_location"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/user_location_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/done"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/box_grey"
+            android:layout_gravity="center"
+            android:onClick="completeProfile"
+            android:clickable="false"
+            android:visibility="visible"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_loc"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:padding="5dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/set_location_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="@dimen/half_margin"
+                android:layout_height="@dimen/half_margin"
+                android:background="@drawable/circle_grey"
+                android:layout_margin="@dimen/quarter_margin"/>
+            <View
+                android:layout_width="@dimen/half_margin"
+                android:layout_height="@dimen/half_margin"
+                android:background="@drawable/circle_grey"
+                android:layout_margin="@dimen/quarter_margin"/>
+            <View
+                android:layout_width="@dimen/half_margin"
+                android:layout_height="@dimen/half_margin"
+                android:background="@drawable/circle_grey"
+                android:layout_margin="@dimen/quarter_margin"/>
+            <View
+                android:layout_width="@dimen/half_margin"
+                android:layout_height="@dimen/half_margin"
+                android:background="@drawable/circle_accent"
+                android:layout_margin="@dimen/quarter_margin"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
